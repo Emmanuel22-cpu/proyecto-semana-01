@@ -1,50 +1,38 @@
-# Welcome to your Expo app 👋
+#  Mi Perfil Personal - React Native App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este proyecto es una aplicación móvil desarrollada con **React Native** y **Expo**, que muestra mi perfil personal como estudiante y técnico en programación de software. La aplicación presenta información sobre mí, mis habilidades, proyectos desarrollados y datos de contacto.
 
-## Get started
+---
 
-1. Install dependencies
+##  Características Principales
 
-   ```bash
-   npm install
-   ```
+- Pantalla principal con encabezado y foto de perfil.  
+- Sección **"Sobre mí"** con una breve descripción personal.  
+- Sección **"Mis habilidades"** con íconos visuales representando las tecnologías que manejo.  
+- Sección **"Mis proyectos"** con descripción, etiquetas y tecnologías usadas.  
+- Información de contacto (correo, GitHub y ubicación).  
+- Diseño responsivo y limpio con componentes reutilizables.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+##  Componentes Principales
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+###  SkillCard
+Muestra una tarjeta con el nombre y el ícono de una habilidad.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```tsx
+<SkillCard icon={<Ionicons name="logo-react" />} name="React Native" />
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+###  ProjectCard
+Muestra la información de un proyecto, incluyendo su ícono, título, descripción y etiquetas de tecnologías.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```tsx
+<ProjectCard
+  icon={<FontAwesome5 name="solar-panel" size={26} color="#FACC15" />}
+  title="Ecoenergix"
+  description="Plataforma de compra y venta de paneles solares."
+  tags={["React", "Node.js", "MongoDB"]}
+/>
+```
